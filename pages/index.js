@@ -1,6 +1,7 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import { GraphQLClient, gql } from "graphql-request"
+import { GetServerSideProps } from 'next';
 import { Blog } from "../components/Blog"
 
 const graphCms = new GraphQLClient(
@@ -10,28 +11,23 @@ const graphCms = new GraphQLClient(
 const QUERY = gql`
 	{
 		posts {
-			id {
-				title
-				publishedDate
-				slug
-				content {
-					html
-				}
-				author {
-					name
-					authorPhoto {
-						url
-					}
-				}
-				coverPhoto {
-						url
-					}
+			id,
+			title,
+			publishedDate,
+			slug,
+			content {
+				html
+			}
+			author {
+				name,
+				authorPhoto {
+					url
 				}
 			}
 		}
 	}
 `
-async function getServerSideProps() {
+export async function getServerSideProps() {
 	const { posts } = await graphCms.request(QUERY)
 	return {
 		props: {
