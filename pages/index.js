@@ -1,10 +1,9 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import { GraphQLClient, gql } from "graphql-request"
-import { GetServerSideProps } from 'next';
 import { Blog } from "../components/Blog"
 
-const graphCms = new GraphQLClient(
+const graphcms = new GraphQLClient(
 	`https://api-ap-south-1.hygraph.com/v2/${process.env.API_KEY}/master`
 )
 
@@ -27,16 +26,16 @@ const QUERY = gql`
 		}
 	}
 `
-export async function getServerSideProps() {
-	const { posts } = await graphCms.request(QUERY)
+export async function getStaticProps() {
+	const { posts } = await graphcms.request(QUERY)
 	return {
 		props: {
-			posts
-		}
+			posts,
+		},
 	}
 }
 
-export default function Home() {
+export default function Home({posts}) {
 	return (
 		<div className={styles.container}>
 			<Head>
