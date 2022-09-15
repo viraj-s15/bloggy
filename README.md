@@ -1,4 +1,4 @@
-## Visit the blog <a href="https://vercel.com/viraj-s15/bloggy/BRD9Ftjs425ZfSdex7Fg8o9Jh7zv">here</a>
+## Visit the blog <a href="https://bloggy-qn7ip9ibg-viraj-s15.vercel.app">here</a>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
