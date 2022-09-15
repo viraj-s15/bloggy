@@ -66,3 +66,15 @@ a {
 		padding: 3rem 0rem;
 	}
 }
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+	* {
+		zoom: 0.8;
+	}
+}
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+	* {
+		zoom: 0.65;
+	}
+}
