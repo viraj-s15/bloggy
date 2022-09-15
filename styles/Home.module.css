@@ -80,4 +80,8 @@
 		font-size: 4.5rem;
 		margin-right: 8rem;
 	}
+
+	.pageTitle {
+		margin-bottom: 4.5rem;
+	}
 }
