@@ -49,6 +49,7 @@ export default function Home({ posts }) {
 			</Head>
 			<div className={styles.pageTitle}>
 				<h1>Bloggy</h1>
+				<h1>Bloggy</h1>
 			</div>
 			<main className={styles.main}>
 				{posts.map((post) => (
